@@ -8,7 +8,7 @@ A macOS tool that scrapes your Freedom Mobile account for data usage and display
 
 ```bash
 # 1. Clone the repo
-git clone <your-repo-url>
+git clone https://github.com/sundarmuthukinc/freedom-data-tracker.git
 cd freedom-data-tracker
 
 # 2. Run setup
