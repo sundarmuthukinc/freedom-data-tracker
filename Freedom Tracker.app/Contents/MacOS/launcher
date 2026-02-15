@@ -1,0 +1,14 @@
+#!/bin/bash
+# Freedom Tracker — App Launcher
+# Opens Terminal and runs the Freedom Mobile data tracker
+
+SCRIPT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+PYTHON="$SCRIPT_DIR/venv/bin/python3"
+TRACKER="$SCRIPT_DIR/freedom_tracker.py"
+
+osascript <<EOF
+tell application "Terminal"
+    activate
+    do script "clear && echo '📱 Freedom Mobile Data Tracker' && echo '' && '$PYTHON' '$TRACKER' --notify ; echo '' ; echo 'Press any key to close...' ; read -n 1"
+end tell
+EOF
